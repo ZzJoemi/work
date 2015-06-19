@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linear_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:background="@android:color/white">
+
+                <ImageView
+                    android:id="@+id/iv_chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/chat_button" />
+
+                <ImageView
+                    android:id="@+id/iv_addfriend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/add_friend_button" />
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/rg_content"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@color/hologray"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_wenzhang"
+                    style="@style/rghomepage"
+                    android:checked="true"
+                    android:text="文章" />
+
+                <RadioButton
+                    android:id="@+id/rb_guanzhu"
+                    style="@style/rghomepage"
+                    android:text="关注" />
+
+                <RadioButton
+                    android:id="@+id/rb_beixuan"
+                    style="@style/rghomepage"
+                    android:text="备选" />
+
+                <RadioButton
+                    android:id="@+id/rb_huodong"
+                    style="@style/rghomepage"
+                    android:text="活动" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_grounp"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@color/hologrounpgray"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:textColor="@color/textgray" />
+
+            <RelativeLayout
+                android:id="@+id/relative_contanier"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.xns.xnsapp.uis.ChildListView
+                    android:id="@+id/lv_wz"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+
+                <com.xns.xnsapp.uis.ChildListView
+                    android:id="@+id/lv_gz"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"/>
+
+
+                <com.xns.xnsapp.uis.ChildListView
+                    android:id="@+id/lv_bx"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"/>
+
+
+                <com.xns.xnsapp.uis.ChildListView
+                    android:id="@+id/lv_hd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/apppurple"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/iv_top_back"
+        style="@style/titleimg"
+        android:src="@mipmap/back_icon"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:scaleType="fitCenter"/>
+
+    <!--右侧三个按钮-->
+    <ImageView
+        android:id="@+id/iv_top_share"
+        style="@style/titleimg"
+        android:src="@mipmap/more_icon"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:scaleType="fitCenter"/>
+
+    <ImageView
+        android:id="@+id/iv_top_chat"
+        style="@style/titleimg"
+        android:src="@mipmap/comment_icon"
+       android:layout_toLeftOf="@id/iv_top_share"
+        android:layout_marginRight="15dp"
+        android:scaleType="fitCenter"/>
+
+    <ImageView
+        android:id="@+id/iv_top_like"
+        style="@style/titleimg"
+        android:src="@mipmap/like_icon_detailw"
+        android:layout_toLeftOf="@id/iv_top_chat"
+        android:layout_marginRight="15dp"
+        android:scaleType="fitCenter"/>
+</RelativeLayout>

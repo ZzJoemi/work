@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/iv_goods"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true"
+        android:scaleType="fitCenter"/>
+
+    <TextView
+        android:id="@+id/tv_goodsname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/textcontent"
+        android:layout_toRightOf="@id/iv_goods"
+        android:layout_marginLeft="8dp"
+        android:layout_alignTop="@id/circle_usericon"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_goodtype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_goodsname"
+        android:layout_toRightOf="@id/iv_goods"
+        android:layout_marginLeft="8dp"
+        android:textColor="@color/homegray"
+        android:textSize="12sp"/>
+
+    <ImageView
+        android:id="@+id/iv_go"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/chevrons_icon"/>
+
+</RelativeLayout>

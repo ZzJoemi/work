@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <!-- fragment容器 -->
+
+        <LinearLayout
+            android:id="@+id/linear_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rg_tabs"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <!-- 底部tab选项 -->
+
+        <RadioGroup
+            android:id="@+id/rg_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="3dp"
+            android:gravity="bottom"
+            android:focusable="false"
+            android:orientation="horizontal"
+            android:background="@android:color/white">
+
+            <!-- 首页 -->
+
+            <RadioButton
+                android:id="@+id/rb_main"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:drawableTop="@drawable/selector_main"
+                android:gravity="center_horizontal"
+                android:onClick="rbClick"
+                android:text="@string/rb_main"
+                android:focusable="false"
+                android:textColor="@color/selector_tabs"
+                style="@style/tabtext"/>
+            <!-- 发现 -->
+
+            <RadioButton
+                android:id="@+id/rb_find"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/selector_find"
+                android:gravity="center_horizontal"
+                android:onClick="rbClick"
+                android:text="@string/rb_find"
+                android:focusable="false"
+                android:textColor="@color/selector_tabs"
+                style="@style/tabtext"/>
+
+            <!-- 放置卫星按钮部分 -->
+
+            <View
+                android:id="@+id/view_arcmenu"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:focusable="false"/>
+
+            <!-- 聊天 -->
+
+            <RadioButton
+                android:id="@+id/rb_chat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/selector_chat"
+                android:gravity="center_horizontal"
+                android:onClick="rbClick"
+                android:text="@string/rb_chat"
+                android:focusable="false"
+                android:textColor="@color/selector_tabs"
+                style="@style/tabtext"/>
+            <!-- 我 -->
+
+            <RadioButton
+                android:id="@+id/rb_me"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/selector_me"
+                android:gravity="center_horizontal"
+                android:onClick="rbClick"
+                android:text="@string/rb_me"
+                android:focusable="false"
+                android:textColor="@color/selector_tabs"
+                style="@style/tabtext"/>
+        </RadioGroup>
+    </RelativeLayout>
+
+    <!-- 真正的arcmenu部分 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp">
+
+        <com.xns.xnsapp.uis.ArcMenu
+            android:id="@+id/id_arcmenu1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            zhy:position="center_bottom"
+            zhy:radius="140dp" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent" >
+
+                <ImageView
+                    android:id="@+id/id_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/tabs_plus" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/wenzhang"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/tiwen"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/zhaoji"/>
+        </com.xns.xnsapp.uis.ArcMenu>
+    </RelativeLayout>
+
+</FrameLayout>

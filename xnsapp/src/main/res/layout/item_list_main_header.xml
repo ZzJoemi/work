@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relative_header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+    
+    <com.xns.xnsapp.uis.RoundImageView
+        android:id="@+id/circle_usericon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp" />
+    
+    <TextView 
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_toRightOf="@id/circle_usericon"
+        android:layout_alignTop="@id/circle_usericon"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:textColor="@color/apppurple"/>
+    
+      <TextView 
+        android:id="@+id/tv_marrytime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_toRightOf="@id/circle_usericon"
+        android:layout_below="@id/tv_username"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="8dp"
+        android:textColor="@color/textgray"/>
+      
+      <ImageView 
+          android:id="@+id/iv_time"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_toLeftOf="@+id/tv_time"
+          android:layout_centerVertical="true"
+          android:layout_marginRight="5dp"
+          android:src="@mipmap/time"/>
+      
+      <TextView 
+          android:id="@+id/tv_time"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_centerVertical="true"
+          android:layout_marginRight="10dp"
+          android:textSize="14sp"
+          android:textColor="@color/textgray"/>
+
+    <!--分割线-->
+    <LinearLayout
+        android:id="@+id/linear_split"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/contentsplit"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"/>
+
+    <!--撑起头部试图，解决方案-->
+    <View
+        android:id="@+id/view_all"
+        android:layout_width="1dp"
+        android:layout_height="56dp"
+        android:layout_alignParentLeft="true"/>
+</RelativeLayout>

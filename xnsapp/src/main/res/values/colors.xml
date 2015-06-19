@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--   紫色，app主色调 -->
+    <color name="apppurple">#894ccc</color>
+    <!-- 灰色，app默认无焦点颜色 -->
+    <color name="appgray">#A0A0A0</color>
+    <color name="textgray">#616161</color>
+    <color name="textcontent">#212121</color>
+    <color name="contentsplit">#efefef</color>
+    <color name="commenttext">#bdbdbd</color>
+    <color name="backgroudwhite">#ffffff</color>
+    <color name="hologray">#F7F7F7</color>
+    <color name="hologrounpgray">#efefef</color>
+    <color name="homegray">#9e9e9e</color>
+</resources>
